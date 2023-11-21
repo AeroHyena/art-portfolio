@@ -12,5 +12,8 @@
     "express"
   ],
   "author": "Arnold Lohmann",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
 }

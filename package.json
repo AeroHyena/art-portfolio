@@ -1,0 +1,16 @@
+{
+  "name": "art-portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio page to display art projects",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "nodejs",
+    "express"
+  ],
+  "author": "Arnold Lohmann",
+  "license": "MIT"
+}

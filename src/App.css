@@ -1,9 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100% !important;
+  height: 100%;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
 #slider {
-  margin: 10vh 20vh 50vh 20vh;
+  /* top right bottom left */
+  margin: 10vh 20vh 30vh 20vh;
   padding: 5vh;
-  height: 70vh;
+  height: 75vh;
 
   background-color: lightgray;
   border: 1px solid gray;
   border-radius: 25px;
+}
+
+#sliderContent {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vh;
+  height: 87.5%;
+}
+
+#description {
+  padding-right: 2vw;
+  width: 25%;
+
+  border: 1px solid gray;
+}
+
+#media {
+  padding-left: 2vw;
+  width: 75%;
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  border: 1px solid gray;
 }

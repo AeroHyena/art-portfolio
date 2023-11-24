@@ -3,7 +3,7 @@ import { useState } from "react";
 interface ListGroupProps {
   items: string[];
   heading: string;
-  onSelectItem: (ittem: string) => void;
+  onSelectItem: (item: string) => void;
 }
 
 function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {

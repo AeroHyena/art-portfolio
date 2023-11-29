@@ -16,6 +16,7 @@ function Slider({ descriptions, media }: SliderProps) {
     description: descriptions["hash"],
     media: "whooop",
   });
+
   return (
     <>
       <div id="slider" key="slider">
@@ -37,6 +38,7 @@ function Slider({ descriptions, media }: SliderProps) {
         </div>
       </div>
 
+      {/* render a row with IndexButton buttons that will update the slider content on click */}
       <div id="indexRow" key="indexRow">
         {Object.keys(descriptions).map((key) => (
           <IndexButton

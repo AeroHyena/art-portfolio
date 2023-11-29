@@ -10,3 +10,5 @@ This webapp also serves as my personal art portfolio, but is made with reusabili
   > Used to display a project and its description/information.
 - > _IndexButton_  
   > Used to allows the user to switch to a project by clicking on its corresponding IndexButton.
+- > _Background_  
+  > A component responsible for rendering a background image with blur and texture effects.

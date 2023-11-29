@@ -1,20 +1,33 @@
+import IndexButton from "./IndexButton";
+import DataFormat from "./interfaces";
+import { useState } from "react";
+
 interface SliderProps {
-  description: string[]; // The description is submitted
+  descriptions: {
+    hash: string[];
+    [key: string]: string[];
+  };
   media: string;
 }
 
-function Slider({ description, media }: SliderProps) {
+function Slider({ descriptions, media }: SliderProps) {
+  // Set state to hold data which can be updated by the child compnents
+  // initialize using initial data
+  const [data, setData] = useState({
+    description: descriptions["hash"],
+    media: "whooop",
+  });
   return (
     <>
       <div id="slider">
         <h1>Description</h1>
 
         <div id="sliderContent">
-          {description.length === 0 && (
+          {data.description.length === 0 && (
             <p>No description is available for this project</p>
           )}
           <div id="description">
-            {description.map((text, index) => (
+            {data.description.map((text, index) => (
               <p key={index}>{text}</p>
             ))}
           </div>
@@ -23,6 +36,16 @@ function Slider({ description, media }: SliderProps) {
             <p>{media}</p>
           </div>
         </div>
+      </div>
+
+      <div id="indexRow">
+        {Object.keys(descriptions).map((key) => (
+          <IndexButton
+            index={key}
+            rootData={{ description: descriptions[key], media: "media" }}
+            setData={setData}
+          />
+        ))}
       </div>
     </>
   );

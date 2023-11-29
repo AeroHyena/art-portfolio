@@ -1,4 +1,5 @@
 import Slider from "./components/Slider";
+import Background from "./components/Background";
 
 interface DescriptorPairs {
   hash: string[];
@@ -18,7 +19,10 @@ const descriptions: DescriptorPairs = {
 function App() {
   return (
     <div>
-      <Slider descriptions={descriptions} media="{null}" />
+      <Background />
+      <main>
+        <Slider descriptions={descriptions} media="{null}" />
+      </main>
     </div>
   );
 }

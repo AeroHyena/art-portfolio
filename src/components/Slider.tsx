@@ -1,5 +1,4 @@
 import IndexButton from "./IndexButton";
-import DataFormat from "./interfaces";
 import { useState } from "react";
 
 interface SliderProps {
@@ -19,7 +18,7 @@ function Slider({ descriptions, media }: SliderProps) {
   });
   return (
     <>
-      <div id="slider">
+      <div id="slider" key="slider">
         <h1>Description</h1>
 
         <div id="sliderContent">
@@ -38,9 +37,10 @@ function Slider({ descriptions, media }: SliderProps) {
         </div>
       </div>
 
-      <div id="indexRow">
+      <div id="indexRow" key="indexRow">
         {Object.keys(descriptions).map((key) => (
           <IndexButton
+            key={key}
             index={key}
             rootData={{ description: descriptions[key], media: "media" }}
             setData={setData}
